@@ -13,6 +13,7 @@
  */
 package com.tikal.hudson.plugins.notification.model;
 
+import java.util.ArrayList;
 
 public class ScmState
 {
@@ -21,6 +22,8 @@ public class ScmState
     private String branch;
 
     private String commit;
+    
+    private ArrayList<String> culprits;
 
     public String getUrl ()
     {
@@ -51,4 +54,12 @@ public class ScmState
     {
         this.commit = commit;
     }
+
+	public ArrayList<String> getCulprits() {
+		return culprits;
+	}
+
+	public void setCulprits(ArrayList<String> culprits) {
+		this.culprits = culprits;
+	}
 }
